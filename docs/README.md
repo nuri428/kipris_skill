@@ -28,34 +28,50 @@ http://plus.kipris.or.kr/openapi/rest/{ServicePath}/{operationName}?accessKey={A
 http://plus.kipris.or.kr/kipo-api/kipi/{ServicePath}/{operationName}?ServiceKey={API_KEY}&param1=value1
 ```
 
-### 서비스 경로 매핑
+### 서비스 경로 매핑 (24개 확인)
 
-#### 확인된 경로 (실제 구현/테스트 완료)
+#### API 키로 검증 완료 (2개)
 
 | 서비스명 | ServicePath | 게이트웨이 |
 |---------|-------------|-----------|
 | 특허·실용 공개·등록공보 | `patUtiModInfoSearchSevice` | A + B (오퍼레이션별 상이) |
-| 해외특허 | `ForeignPatentAdvencedSearchService` | A |
+| 해외특허 (고급검색) | `ForeignPatentAdvencedSearchService` | A |
 
-#### GitHub 코드 검색으로 확인된 경로 (미검증)
+#### 포털 크롤링 확인 (15개)
+
+| 서비스명 | ServicePath | 게이트웨이 | DBII |
+|---------|-------------|-----------|------|
+| 특허·실용 인용문헌 | `CitationService` | A | 004 |
+| 특허 관련 문서 | `RelatedDocsonfilePatService` | A | 005 |
+| 특허·실용 분류코드 변동 이력 | `PatentClassificationInfoService` | A | 007 |
+| 디자인 공보 | `designInfoSearchService` | B | 008 |
+| 디자인 관련 문서 | `RelatedDocsonfileDGService` | A | 009 |
+| 상표 관련 문서 | `RelatedDocsonfileTMService` | A | 011 |
+| 상표 출원 속보 | `trademarkInfoSearchService` | B | 012 |
+| 특허·실용 통지서 마감기한 | `DueDateService` | A | 014 |
+| 등록사항 | `RegistrationService` | A | 015 |
+| 분류코드 | `ClassificationService` | A | 017 |
+| 심판사항 | `judgmentInfoSearchService` | B | 019 |
+| 대표 출원인 | `RpstApplicantService` | A | 020 |
+| 시소러스 | `ThesaurusInfoService` | A | 021 |
+| 한국특허영문초록(KPA) | `KpaGeneralSearchService` | A | 024 |
+| 기계번역용 국문초록 | `KorAbstractInfoService` | A | 025 |
+
+#### GitHub 코드 검색 확인 — 미검증 (7개)
 
 | 서비스명 (추정) | ServicePath | 게이트웨이 (추정) |
 |---------------|-------------|-----------------|
-| 디자인 공보 | `designInfoSearchService` | A + B |
-| 상표 출원 속보 | `trademarkInfoSearchService` | A + B |
-| 특허 패밀리 | `patFamInfoSearchService` | B |
-| 특허·실용 인용문헌 | `CitationService` | A |
+| 해외특허 (일반검색) | `ForeignPatentGeneralSearchService` | A |
 | 특허·실용 피인용문헌 | `CitingService` | A |
+| 특허 패밀리 | `patFamInfoSearchService` | B |
 | 출원인 법인 | `CorpBsApplicantService` | A |
 | 의견제출통지서 | `IntermediateDocumentOPService` | A |
-| 거절결정서/등록결정서 | `IntermediateDocumentREService` | A |
-| 특허 관련 문서 | `RelatedDocsonfilePatService` | A |
-| 상표 관련 문서 | `RelatedDocsonfileTMService` | A |
+| 거절결정서 | `IntermediateDocumentREService` | A |
 | 상표 분류코드 | `TradeMarkClassificationInfoService` | A |
-| (미확인) | `PatentSearchService` | A |
 
-> **주의**: "미검증" 경로는 GitHub 공개 코드에서 추출한 것으로, API 키로 실제 호출 검증이 필요합니다.
-> 나머지 38개 서비스의 ServicePath는 KIPRIS Plus 포털에서 개별 확인 필요합니다.
+> 게이트웨이: A = OpenAPI (`/openapi/rest/`), B = KIPO API (`/kipo-api/kipi/`)
+> "미검증" 경로는 GitHub 공개 코드에서 추출한 것으로, API 키로 실제 호출 검증이 필요합니다.
+> 나머지 서비스의 ServicePath는 KIPRIS Plus 포털에서 개별 확인 필요합니다.
 
 ### 응답 형식
 

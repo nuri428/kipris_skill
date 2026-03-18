@@ -2,8 +2,9 @@
 
 - **API 유형**: REST
 - **오퍼레이션 수**: 51개 (구현: 0, 폐기예정: 4)
-- **서비스 경로**: `designInfoSearchService` ⚠️ 미검증
-- **게이트웨이**: OpenAPI (`/openapi/rest/`) + KIPO API (`/kipo-api/kipi/`) — 오퍼레이션별 상이 (추정)
+- **서비스 경로**: `designInfoSearchService` (포털 확인)
+- **게이트웨이**: KIPO API (`/kipo-api/kipi/`)
+- **인증 키**: `ServiceKey`
 
 ---
 

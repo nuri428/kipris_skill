@@ -2,7 +2,7 @@
 
 - **API 유형**: REST
 - **오퍼레이션 수**: 81개 (구현: 5, 폐기예정: 15)
-- **서비스 경로**: `ForeignPatentAdvencedSearchService`
+- **서비스 경로**: `ForeignPatentAdvencedSearchService` (검증됨), `ForeignPatentGeneralSearchService` (미검증)
 - **게이트웨이**: OpenAPI (`/openapi/rest/`)
 - **인증 키**: `accessKey`
 - **공통 응답 루트 키**: `response.body.items.searchResult`

@@ -2,6 +2,9 @@
 
 - **API 유형**: REST
 - **오퍼레이션 수**: 31개 (구현: 0, 폐기예정: 2)
+- **서비스 경로**: `judgmentInfoSearchService` (포털 확인)
+- **게이트웨이**: KIPO API (`/kipo-api/kipi/`)
+- **인증 키**: `ServiceKey`
 
 ---
 

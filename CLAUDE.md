@@ -31,24 +31,50 @@ KIPRIS Plus Open API를 활용한 **한국 지식재산 검색 Claude Code Skill
 - XML 응답 → JSON 변환 후 파싱
 - 응답 데이터 루트 키가 오퍼레이션마다 다름 (예: `response.body.items.PatentUtilityInfo` vs `response.body.items.item`)
 
-### 확인된 서비스 경로
+### 확인된 서비스 경로 (24개)
 
-| 서비스 | ServicePath | 상태 |
-|--------|-------------|------|
-| 특허·실용 공개·등록공보 | `patUtiModInfoSearchSevice` | 검증됨 |
-| 해외특허 | `ForeignPatentAdvencedSearchService` | 검증됨 |
-| 디자인 공보 | `designInfoSearchService` | 미검증 |
-| 상표 출원 속보 | `trademarkInfoSearchService` | 미검증 |
-| 특허 패밀리 | `patFamInfoSearchService` | 미검증 |
-| 특허·실용 인용문헌 | `CitationService` | 미검증 |
-| 특허·실용 피인용문헌 | `CitingService` | 미검증 |
-| 출원인 법인 | `CorpBsApplicantService` | 미검증 |
-| 의견제출통지서 | `IntermediateDocumentOPService` | 미검증 |
-| 거절결정서 | `IntermediateDocumentREService` | 미검증 |
-| 상표 분류코드 | `TradeMarkClassificationInfoService` | 미검증 |
+#### API 키로 검증 완료 (2개)
 
+| 서비스 | ServicePath | 게이트웨이 |
+|--------|-------------|-----------|
+| 특허·실용 공개·등록공보 | `patUtiModInfoSearchSevice` | A + B |
+| 해외특허 (고급검색) | `ForeignPatentAdvencedSearchService` | A |
+
+#### 포털 크롤링 확인 (15개)
+
+| 서비스 | ServicePath | 게이트웨이 | DBII |
+|--------|-------------|-----------|------|
+| 특허·실용 인용문헌 | `CitationService` | A | 004 |
+| 특허 관련 문서 | `RelatedDocsonfilePatService` | A | 005 |
+| 특허·실용 분류코드 변동 이력 | `PatentClassificationInfoService` | A | 007 |
+| 디자인 공보 | `designInfoSearchService` | B | 008 |
+| 디자인 관련 문서 | `RelatedDocsonfileDGService` | A | 009 |
+| 상표 관련 문서 | `RelatedDocsonfileTMService` | A | 011 |
+| 상표 출원 속보 | `trademarkInfoSearchService` | B | 012 |
+| 특허·실용 통지서 마감기한 | `DueDateService` | A | 014 |
+| 등록사항 | `RegistrationService` | A | 015 |
+| 분류코드 | `ClassificationService` | A | 017 |
+| 심판사항 | `judgmentInfoSearchService` | B | 019 |
+| 대표 출원인 | `RpstApplicantService` | A | 020 |
+| 시소러스 | `ThesaurusInfoService` | A | 021 |
+| 한국특허영문초록(KPA) | `KpaGeneralSearchService` | A | 024 |
+| 기계번역용 국문초록 | `KorAbstractInfoService` | A | 025 |
+
+#### GitHub 코드 검색 확인 — 미검증 (7개)
+
+| 서비스 | ServicePath | 게이트웨이 (추정) |
+|--------|-------------|-----------------|
+| 해외특허 (일반검색) | `ForeignPatentGeneralSearchService` | A |
+| 특허·실용 피인용문헌 | `CitingService` | A |
+| 특허 패밀리 | `patFamInfoSearchService` | B |
+| 출원인 법인 | `CorpBsApplicantService` | A |
+| 의견제출통지서 | `IntermediateDocumentOPService` | A |
+| 거절결정서 | `IntermediateDocumentREService` | A |
+| 상표 분류코드 | `TradeMarkClassificationInfoService` | A |
+
+> 게이트웨이: A = OpenAPI (`/openapi/rest/`), B = KIPO API (`/kipo-api/kipi/`)
 > "미검증" 경로는 GitHub 공개 코드에서 추출. API 키로 실제 호출 검증 필요.
-> 나머지 38개 서비스의 ServicePath는 KIPRIS Plus 포털에서 개별 확인 필요.
+> 나머지 서비스의 ServicePath는 KIPRIS Plus 포털에서 개별 확인 필요.
 
 ## 구현 현황
 
