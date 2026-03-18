@@ -2,6 +2,8 @@
 
 - **API 유형**: REST
 - **오퍼레이션 수**: 5개 (구현: 0, 폐기예정: 0)
+- **서비스 경로**: `CitationService` ⚠️ 미검증
+- **게이트웨이**: OpenAPI (`/openapi/rest/`) (추정)
 
 ---
 

@@ -33,12 +33,22 @@ KIPRIS Plus Open API를 활용한 **한국 지식재산 검색 Claude Code Skill
 
 ### 확인된 서비스 경로
 
-| 서비스 | ServicePath |
-|--------|-------------|
-| 특허·실용 공개·등록공보 | `patUtiModInfoSearchSevice` |
-| 해외특허 | `ForeignPatentAdvencedSearchService` |
+| 서비스 | ServicePath | 상태 |
+|--------|-------------|------|
+| 특허·실용 공개·등록공보 | `patUtiModInfoSearchSevice` | 검증됨 |
+| 해외특허 | `ForeignPatentAdvencedSearchService` | 검증됨 |
+| 디자인 공보 | `designInfoSearchService` | 미검증 |
+| 상표 출원 속보 | `trademarkInfoSearchService` | 미검증 |
+| 특허 패밀리 | `patFamInfoSearchService` | 미검증 |
+| 특허·실용 인용문헌 | `CitationService` | 미검증 |
+| 특허·실용 피인용문헌 | `CitingService` | 미검증 |
+| 출원인 법인 | `CorpBsApplicantService` | 미검증 |
+| 의견제출통지서 | `IntermediateDocumentOPService` | 미검증 |
+| 거절결정서 | `IntermediateDocumentREService` | 미검증 |
+| 상표 분류코드 | `TradeMarkClassificationInfoService` | 미검증 |
 
-나머지 50개 서비스의 ServicePath는 KIPRIS Plus 포털에서 확인 필요.
+> "미검증" 경로는 GitHub 공개 코드에서 추출. API 키로 실제 호출 검증 필요.
+> 나머지 38개 서비스의 ServicePath는 KIPRIS Plus 포털의 API 활용 가이드(PDF)에서 확인 가능.
 
 ## 구현 현황
 

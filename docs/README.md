@@ -28,14 +28,34 @@ http://plus.kipris.or.kr/openapi/rest/{ServicePath}/{operationName}?accessKey={A
 http://plus.kipris.or.kr/kipo-api/kipi/{ServicePath}/{operationName}?ServiceKey={API_KEY}&param1=value1
 ```
 
-### 확인된 서비스 경로 매핑
+### 서비스 경로 매핑
+
+#### 확인된 경로 (실제 구현/테스트 완료)
 
 | 서비스명 | ServicePath | 게이트웨이 |
 |---------|-------------|-----------|
 | 특허·실용 공개·등록공보 | `patUtiModInfoSearchSevice` | A + B (오퍼레이션별 상이) |
 | 해외특허 | `ForeignPatentAdvencedSearchService` | A |
 
-> 나머지 50개 서비스의 ServicePath는 미확인 상태입니다. KIPRIS Plus 포털의 API 활용 가이드에서 확인 가능합니다.
+#### GitHub 코드 검색으로 확인된 경로 (미검증)
+
+| 서비스명 (추정) | ServicePath | 게이트웨이 (추정) |
+|---------------|-------------|-----------------|
+| 디자인 공보 | `designInfoSearchService` | A + B |
+| 상표 출원 속보 | `trademarkInfoSearchService` | A + B |
+| 특허 패밀리 | `patFamInfoSearchService` | B |
+| 특허·실용 인용문헌 | `CitationService` | A |
+| 특허·실용 피인용문헌 | `CitingService` | A |
+| 출원인 법인 | `CorpBsApplicantService` | A |
+| 의견제출통지서 | `IntermediateDocumentOPService` | A |
+| 거절결정서/등록결정서 | `IntermediateDocumentREService` | A |
+| 특허 관련 문서 | `RelatedDocsonfilePatService` | A |
+| 상표 관련 문서 | `RelatedDocsonfileTMService` | A |
+| 상표 분류코드 | `TradeMarkClassificationInfoService` | A |
+| (미확인) | `PatentSearchService` | A |
+
+> **주의**: "미검증" 경로는 GitHub 공개 코드에서 추출한 것으로, API 키로 실제 호출 검증이 필요합니다.
+> 나머지 38개 서비스의 ServicePath는 KIPRIS Plus 포털의 [API 활용 가이드(PDF)](https://plus.kipris.or.kr/portal/bbs/view.do?nttId=638&bbsId=B0000001&menuNo=210149)에서 확인 가능합니다.
 
 ### 응답 형식
 

@@ -2,6 +2,8 @@
 
 - **API 유형**: REST
 - **오퍼레이션 수**: 12개 (구현: 0, 폐기예정: 1)
+- **서비스 경로**: `IntermediateDocumentREService` ⚠️ 미검증 (RE=Rejection 추정, 등록결정서일 수도 있음)
+- **게이트웨이**: OpenAPI (`/openapi/rest/`) (추정)
 
 ---
 
