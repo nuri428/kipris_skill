@@ -119,68 +119,67 @@ curl "http://plus.kipris.or.kr/openapi/rest/ForeignPatentAdvencedSearchService/f
 
 | 항목 | 수치 |
 |------|------|
-| 서비스 수 | 52개 |
-| 전체 오퍼레이션 | 564개 |
-| 구현 완료 | 12개 (2.1%) |
-| 폐기예정 | 30개 |
-| 미구현 (활성) | 522개 |
+| 포털 등록 서비스 | 49개 |
+| ServicePath 확인 (스킬 지원) | 20개 |
+| ServicePath 미확인 (스킬 미지원) | 29개 |
+| 구현 완료 오퍼레이션 | 12개 |
+| 폐기예정 오퍼레이션 | 30개 |
 
 ## 서비스 목록
 
-| # | 서비스명 | 오퍼레이션 | 구현 | 상세 |
-|---|---------|-----------|------|------|
-| 1 | 특허·실용 공개·등록공보 | 61개 | ✅ 7/61 | [상세](services/patent_utility.md) |
-| 2 | 특허·실용 인용문헌 | 5개 | ❌ 0/5 | [상세](services/patent_citation.md) |
-| 3 | 특허·실용 행정처리 이력 | 3개 | ❌ 0/3 | [상세](services/patent_admin_history.md) |
-| 4 | 특허·실용 분류코드 변동 이력 | 3개 | ❌ 0/3 | [상세](services/patent_classification_history.md) |
-| 5 | 디자인 공보 | 51개 | ❌ 0/51 | [상세](services/design.md) |
-| 6 | 디자인 행정처리 이력 | 2개 | ❌ 0/2 | [상세](services/design_admin_history.md) |
-| 7 | 상표 행정처리 이력 | 2개 | ❌ 0/2 | [상세](services/trademark_admin_history.md) |
-| 8 | 상표 출원 속보 | 54개 | ❌ 0/54 | [상세](services/trademark.md) |
-| 9 | 법적 상태 이력 | 5개 | ❌ 0/5 | [상세](services/legal_status.md) |
-| 10 | 특허·실용 통지서 마감기한 | 6개 | ❌ 0/6 | [상세](services/patent_notice_deadline.md) |
-| 11 | 등록사항 | 12개 | ❌ 0/12 | [상세](services/registration.md) |
-| 12 | 권리자 변동 이력 | 3개 | ❌ 0/3 | [상세](services/right_holder_history.md) |
-| 13 | 분류코드 | 8개 | ❌ 0/8 | [상세](services/classification_code.md) |
-| 14 | 심판사항 | 31개 | ❌ 0/31 | [상세](services/trial.md) |
-| 15 | 대표 출원인 | 4개 | ❌ 0/4 | [상세](services/representative_applicant.md) |
-| 16 | 시소러스 | 2개 | ❌ 0/2 | [상세](services/thesaurus.md) |
-| 17 | 한국특허영문초록(KPA) | 26개 | ❌ 0/26 | [상세](services/kpa_english_abstract.md) |
-| 18 | 기계번역용 국문초록 | 1개 | ❌ 0/1 | [상세](services/machine_translation_abstract.md) |
-| 19 | 해외특허 | 81개 | ✅ 5/81 | [상세](services/foreign_patent.md) |
-| 20 | 공통 | 10개 | ❌ 0/10 | [상세](services/common.md) |
-| 21 | 특허 패밀리 | 5개 | ❌ 0/5 | [상세](services/patent_family.md) |
-| 22 | 다인용 선행문헌 | 2개 | ❌ 0/2 | [상세](services/multi_citation.md) |
-| 23 | 국유특허 | 2개 | ❌ 0/2 | [상세](services/government_patent.md) |
-| 24 | 특허 기탁 미생물 | 4개 | ❌ 0/4 | [상세](services/patent_microorganism.md) |
-| 25 | 인터넷 기술공지 | 2개 | ❌ 0/2 | [상세](services/internet_tech_notice.md) |
-| 26 | 공모전 아이디어 | 1개 | ❌ 0/1 | [상세](services/contest_idea.md) |
-| 27 | IP-Biz 하나로 서비스 기술분류 | 1개 | ❌ 0/1 | [상세](services/ipbiz_hanaro.md) |
-| 28 | 디자인맵 형태분류 | 2개 | ❌ 0/2 | [상세](services/design_map.md) |
-| 29 | 의견제출통지서 | 12개 | ❌ 0/12 | [상세](services/opinion_notice.md) |
-| 30 | 거절결정서 | 12개 | ❌ 0/12 | [상세](services/rejection_decision.md) |
-| 31 | 정정공보 | 24개 | ❌ 0/24 | [상세](services/amendment_gazette.md) |
-| 32 | 출원인 법인 | 5개 | ❌ 0/5 | [상세](services/applicant_corporation.md) |
-| 33 | 디자인 분류코드 변동 이력 | 3개 | ❌ 0/3 | [상세](services/design_classification_history.md) |
-| 34 | 상표 분류코드 변동 이력 | 2개 | ❌ 0/2 | [상세](services/trademark_classification_history.md) |
-| 35 | 해외디자인 | 31개 | ❌ 0/31 | [상세](services/foreign_design.md) |
-| 36 | 해외상표 | 22개 | ❌ 0/22 | [상세](services/foreign_trademark.md) |
-| 37 | 출원인 명칭 변동 이력 | 3개 | ❌ 0/3 | [상세](services/applicant_name_history.md) |
-| 38 | 출원인 기술분야 | 2개 | ❌ 0/2 | [상세](services/applicant_tech_field.md) |
-| 39 | 등록결정서 | 9개 | ❌ 0/9 | [상세](services/registration_decision.md) |
-| 40 | 청구항 변동 이력 | 3개 | ❌ 0/3 | [상세](services/claim_history.md) |
-| 41 | 특허 염기서열 | 7개 | ❌ 0/7 | [상세](services/patent_sequence.md) |
-| 42 | 특허 합금조성비 | 2개 | ❌ 0/2 | [상세](services/patent_alloy.md) |
-| 43 | TM5 공통상태 지표 | 2개 | ❌ 0/2 | [상세](services/tm5_indicator.md) |
-| 44 | 특허·실용 피인용문헌 | 3개 | ❌ 0/3 | [상세](services/patent_cited.md) |
-| 45 | 특허권 존속기간 연장등록 공보 | 4개 | ❌ 0/4 | [상세](services/patent_extension.md) |
-| 46 | 의약품 국제일반명칭 | 3개 | ❌ 0/3 | [상세](services/inn_medicine.md) |
-| 47 | 상표 원산지 명칭 | 3개 | ❌ 0/3 | [상세](services/trademark_origin.md) |
-| 48 | 품종보호권 등록 식물 명칭 | 3개 | ❌ 0/3 | [상세](services/variety_protection.md) |
-| 49 | 일본 특허 합금조성비 | 5개 | ❌ 0/5 | [상세](services/japan_patent_alloy.md) |
-| 50 | 특허 중한 코퍼스 | 1개 | ❌ 0/1 | [상세](services/patent_cn_kr_corpus.md) |
-| 51 | 특허·실용 권리자 변동 이력 | 5개 | ❌ 0/5 | [상세](services/patent_right_transfer.md) |
-| 52 | 특허·실용 법적 상태 이력(ST.27) | 9개 | ❌ 0/9 | [상세](services/patent_legal_status_st27.md) |
+> 경로 열: ✅ = ServicePath 확인 (스킬 지원), ⚠️ = ServicePath 미확인 (스킬 미지원)
+
+| # | 서비스명 | 오퍼레이션 | 경로 | 구현 | 상세 |
+|---|---------|-----------|------|------|------|
+| 1 | 특허·실용 공개·등록공보 | 61개 | ✅ | ✅ 7/61 | [상세](services/patent_utility.md) |
+| 2 | 특허·실용 인용문헌 | 5개 | ✅ | ❌ 0/5 | [상세](services/patent_citation.md) |
+| 3 | 특허·실용 행정처리 이력 | 3개 | ⚠️ | ❌ 0/3 | [상세](services/patent_admin_history.md) |
+| 4 | 특허·실용 분류코드 변동 이력 | 3개 | ✅ | ❌ 0/3 | [상세](services/patent_classification_history.md) |
+| 5 | 디자인 공보 | 51개 | ✅ | ❌ 0/51 | [상세](services/design.md) |
+| 6 | 디자인 행정처리 이력 | 2개 | ⚠️ | ❌ 0/2 | [상세](services/design_admin_history.md) |
+| 7 | 상표 행정처리 이력 | 2개 | ⚠️ | ❌ 0/2 | [상세](services/trademark_admin_history.md) |
+| 8 | 상표 출원 속보 | 54개 | ✅ | ❌ 0/54 | [상세](services/trademark.md) |
+| 9 | 법적 상태 이력 | 5개 | ⚠️ | ❌ 0/5 | [상세](services/legal_status.md) |
+| 10 | 특허·실용 통지서 마감기한 | 6개 | ✅ | ❌ 0/6 | [상세](services/patent_notice_deadline.md) |
+| 11 | 등록사항 | 12개 | ✅ | ❌ 0/12 | [상세](services/registration.md) |
+| 12 | 권리자 변동 이력 | 3개 | ⚠️ | ❌ 0/3 | [상세](services/right_holder_history.md) |
+| 13 | 분류코드 | 8개 | ✅ | ❌ 0/8 | [상세](services/classification_code.md) |
+| 14 | 심판사항 | 31개 | ✅ | ❌ 0/31 | [상세](services/trial.md) |
+| 15 | 대표 출원인 | 4개 | ✅ | ❌ 0/4 | [상세](services/representative_applicant.md) |
+| 16 | 시소러스 | 2개 | ✅ | ❌ 0/2 | [상세](services/thesaurus.md) |
+| 17 | 한국특허영문초록(KPA) | 26개 | ✅ | ❌ 0/26 | [상세](services/kpa_english_abstract.md) |
+| 18 | 기계번역용 국문초록 | 1개 | ✅ | ❌ 0/1 | [상세](services/machine_translation_abstract.md) |
+| 19 | 해외특허 | 81개 | ✅ | ✅ 5/81 | [상세](services/foreign_patent.md) |
+| 20 | 특허 패밀리 | 5개 | ✅ | ❌ 0/5 | [상세](services/patent_family.md) |
+| 21 | 다인용 선행문헌 | 2개 | ⚠️ | ❌ 0/2 | [상세](services/multi_citation.md) |
+| 22 | 국유특허 | 2개 | ⚠️ | ❌ 0/2 | [상세](services/government_patent.md) |
+| 23 | 특허 기탁 미생물 | 4개 | ⚠️ | ❌ 0/4 | [상세](services/patent_microorganism.md) |
+| 24 | 인터넷 기술공지 | 2개 | ⚠️ | ❌ 0/2 | [상세](services/internet_tech_notice.md) |
+| 25 | 공모전 아이디어 | 1개 | ⚠️ | ❌ 0/1 | [상세](services/contest_idea.md) |
+| 26 | IP-Biz 하나로 서비스 기술분류 | 1개 | ⚠️ | ❌ 0/1 | [상세](services/ipbiz_hanaro.md) |
+| 27 | 디자인맵 형태분류 | 2개 | ⚠️ | ❌ 0/2 | [상세](services/design_map.md) |
+| 28 | 의견제출통지서 | 12개 | ✅ | ❌ 0/12 | [상세](services/opinion_notice.md) |
+| 29 | 거절결정서 | 12개 | ✅ | ❌ 0/12 | [상세](services/rejection_decision.md) |
+| 30 | 정정공보 | 24개 | ⚠️ | ❌ 0/24 | [상세](services/amendment_gazette.md) |
+| 31 | 출원인 법인 | 5개 | ✅ | ❌ 0/5 | [상세](services/applicant_corporation.md) |
+| 32 | 디자인 분류코드 변동 이력 | 3개 | ⚠️ | ❌ 0/3 | [상세](services/design_classification_history.md) |
+| 33 | 상표 분류코드 변동 이력 | 2개 | ✅ | ❌ 0/2 | [상세](services/trademark_classification_history.md) |
+| 34 | 해외디자인 | 31개 | ⚠️ | ❌ 0/31 | [상세](services/foreign_design.md) |
+| 35 | 해외상표 | 22개 | ⚠️ | ❌ 0/22 | [상세](services/foreign_trademark.md) |
+| 36 | 출원인 명칭 변동 이력 | 3개 | ⚠️ | ❌ 0/3 | [상세](services/applicant_name_history.md) |
+| 37 | 출원인 기술분야 | 2개 | ⚠️ | ❌ 0/2 | [상세](services/applicant_tech_field.md) |
+| 38 | 등록결정서 | 9개 | ⚠️ | ❌ 0/9 | [상세](services/registration_decision.md) |
+| 39 | 청구항 변동 이력 | 3개 | ⚠️ | ❌ 0/3 | [상세](services/claim_history.md) |
+| 40 | 특허 염기서열 | 7개 | ⚠️ | ❌ 0/7 | [상세](services/patent_sequence.md) |
+| 41 | 특허 합금조성비 | 2개 | ⚠️ | ❌ 0/2 | [상세](services/patent_alloy.md) |
+| 42 | TM5 공통상태 지표 | 2개 | ⚠️ | ❌ 0/2 | [상세](services/tm5_indicator.md) |
+| 43 | 특허·실용 피인용문헌 | 3개 | ✅ | ❌ 0/3 | [상세](services/patent_cited.md) |
+| 44 | 특허권 존속기간 연장등록 공보 | 4개 | ⚠️ | ❌ 0/4 | [상세](services/patent_extension.md) |
+| 45 | 의약품 국제일반명칭 | 3개 | ⚠️ | ❌ 0/3 | [상세](services/inn_medicine.md) |
+| 46 | 상표 원산지 명칭 | 3개 | ⚠️ | ❌ 0/3 | [상세](services/trademark_origin.md) |
+| 47 | 품종보호권 등록 식물 명칭 | 3개 | ⚠️ | ❌ 0/3 | [상세](services/variety_protection.md) |
+| 48 | 일본 특허 합금조성비 | 5개 | ⚠️ | ❌ 0/5 | [상세](services/japan_patent_alloy.md) |
+| 49 | 특허 중한 코퍼스 | 1개 | ⚠️ | ❌ 0/1 | [상세](services/patent_cn_kr_corpus.md) |
 
 ## 구현된 오퍼레이션 요약
 
@@ -224,7 +223,6 @@ docs/api_spec/
     ├── kpa_english_abstract.md
     ├── machine_translation_abstract.md
     ├── foreign_patent.md
-    ├── common.md
     ├── patent_family.md
     ├── multi_citation.md
     ├── government_patent.md
@@ -255,6 +253,4 @@ docs/api_spec/
     ├── variety_protection.md
     ├── japan_patent_alloy.md
     ├── patent_cn_kr_corpus.md
-    ├── patent_right_transfer.md
-    ├── patent_legal_status_st27.md
 ```

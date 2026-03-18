@@ -1,5 +1,8 @@
 # 인터넷 기술공지
 
+> ⚠️ **ServicePath 미확인 — 스킬 미지원**
+> 이 서비스는 KIPRIS Plus 포털에서 API로 제공되지만, REST API 경로(ServicePath)가 아직 확인되지 않아 `/kipris` 스킬에서 호출할 수 없습니다.
+
 - **API 유형**: REST
 - **오퍼레이션 수**: 2개 (구현: 0, 폐기예정: 0)
 
