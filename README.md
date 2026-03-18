@@ -101,6 +101,16 @@ mkdir -p /path/to/project/.claude/skills
 ln -s ~/dev/kipris_skill/SKILL.md /path/to/project/.claude/skills/kipris.md
 ```
 
+## API 사용 제한
+
+| 항목 | 제한 |
+|------|------|
+| 초당 호출 횟수 | **40~50회 미만** 유지 권장 (초과 시 차단 가능) |
+| 월간 무료 호출 | **1,000회/월** (무료 가입자 기준) |
+| 호출 횟수 초기화 | 매월 1일 |
+
+> **Note**: 무료 가입자는 월 1,000회까지 API 호출이 가능합니다. 초과 사용이 필요한 경우 [KIPRIS Plus](https://plus.kipris.or.kr)에서 유료 플랜을 확인하세요.
+
 ## 사용법
 
 Claude Code에서 `/kipris` 명령으로 호출하거나 자연어로 요청합니다:

@@ -73,6 +73,12 @@ http://plus.kipris.or.kr/openapi/rest/{ServicePath}/{operationId}?accessKey={KIP
 http://plus.kipris.or.kr/kipo-api/kipi/{ServicePath}/{operationId}?ServiceKey={KIPRIS_API_KEY}&param1=value1
 ```
 
+## API 사용 제한
+
+- **초당 호출 횟수**: 40~50회 미만 유지 (초과 시 IP 차단 가능)
+- **월간 무료 호출**: 1,000회/월 (무료 가입자 기준, 매월 1일 초기화)
+- 반복 검색이나 페이지네이션 시 요청 간 적절한 간격을 유지할 것
+
 ## 실행 워크플로우
 
 ### 1단계: API 키 확인
