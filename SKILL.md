@@ -78,6 +78,7 @@ http://plus.kipris.or.kr/kipo-api/kipi/{ServicePath}/{operationId}?ServiceKey={K
 - **⚠️ 초당 호출 횟수: 반드시 50회 미만 유지** (초과 시 IP 차단)
 - **월간 무료 호출**: 1,000회/월 (무료 가입자 기준, 매월 1일 초기화)
 - **미신청 API**: 신청하지 않은 API 호출 시 `resultCode: 101` (`AccessKey&ServiceID Is Not Registerd Error`) 등의 에러 반환
+- **복합 호출 주의**: 일부 검색(등록권자 검색 등)은 API 설계상 추가 호출이 필요하여 1회 검색에 여러 번 API를 소모합니다. 무료 사용자(월 1,000회)는 호출 횟수가 소중하므로, 복합 호출 전 반드시 사용자에게 안내하고 동의를 구하세요
 - 반복 검색이나 페이지네이션 시 요청 간 적절한 간격을 유지할 것
 
 ## 실행 워크플로우
@@ -91,7 +92,7 @@ echo $KIPRIS_API_KEY
 - 키워드 검색 → `freeSearchInfo` (국내) / `freeSearch` (해외)
 - 출원번호로 조회 → `applicationNumberSearchInfo` (국내) / `applicationNumberSearch` (해외)
 - 출원인 검색 → `applicantNameSearchInfo` (국내) / `applicantSearch` (해외)
-- 등록권자 검색 → `rightHolerSearchInfo`
+- 등록권자 검색 → `rightHolerSearchInfo` (**⚠️ 아래 "등록권자 검색 주의사항" 참고**)
 - 상세 서지정보 → `getBibliographyDetailInfoSearch`
 - 요약 서지정보 → `getBibliographySumryInfoSearch`
 - 전체검색 (다항목) → `getAdvancedSearch`
@@ -133,6 +134,20 @@ tree = ET.parse(sys.stdin)
 print(json.dumps(xml_to_dict(tree.getroot()), ensure_ascii=False, indent=2))
 "
 ```
+
+### 등록권자 검색 주의사항
+
+`rightHolerSearchInfo`는 등록권자 기준으로 검색하지만, **API 응답에 등록권자 필드가 포함되지 않습니다** (출원인만 반환). 이는 KIPRIS API의 설계 한계입니다.
+
+등록권자를 결과에 표시하려면 2단계 호출이 필요합니다:
+
+1. `rightHolerSearchInfo`로 검색 → 출원번호 목록 획득
+2. 각 출원번호로 `registrationLastRightHolderInfo` (등록사항 서비스) 추가 호출 → 최종권리자명 획득
+
+**⚠️ API 호출 횟수 주의**: 이 과정에서 결과 N건을 표시하면 **1 + N회** API를 호출합니다. 무료 사용자는 월 1,000회 제한이 있으므로, 반드시 사용자에게 추가 호출이 발생한다는 점을 사전 안내하고 동의를 구하세요.
+
+예시 안내 문구:
+> "등록권자 기준으로 검색합니다. KIPRIS API 제약으로 등록권자명을 표시하려면 결과 건수만큼 추가 API 호출이 필요합니다 (5건 요청 시 총 6회 호출). 진행할까요?"
 
 ### 5단계: 결과를 읽기 좋은 테이블 형식으로 사용자에게 제공
 
