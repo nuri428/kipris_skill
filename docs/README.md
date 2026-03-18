@@ -55,7 +55,7 @@ http://plus.kipris.or.kr/kipo-api/kipi/{ServicePath}/{operationName}?ServiceKey=
 | (미확인) | `PatentSearchService` | A |
 
 > **주의**: "미검증" 경로는 GitHub 공개 코드에서 추출한 것으로, API 키로 실제 호출 검증이 필요합니다.
-> 나머지 38개 서비스의 ServicePath는 KIPRIS Plus 포털의 [API 활용 가이드(PDF)](https://plus.kipris.or.kr/portal/bbs/view.do?nttId=638&bbsId=B0000001&menuNo=210149)에서 확인 가능합니다.
+> 나머지 38개 서비스의 ServicePath는 KIPRIS Plus 포털에서 개별 확인 필요합니다.
 
 ### 응답 형식
 
