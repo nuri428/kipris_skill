@@ -153,64 +153,62 @@ print(json.dumps(xml_to_dict(tree.getroot()), ensure_ascii=False, indent=2))
 - `colString` — 국가코드
 - `ipc` — IPC코드
 
-## 전체 서비스 카탈로그 (Tier 2) — 52개 서비스
+## 전체 서비스 카탈로그 (Tier 2) — 49개 서비스
 
 Tier 1에 없는 오퍼레이션 요청 시, `docs/services/` 디렉토리의 해당 문서를 읽어 파라미터를 확인하세요.
+경로 열: ✅ = ServicePath 확인 (즉시 호출 가능), ⚠️ = ServicePath 미확인
 
-| # | 서비스명 | 문서 | 오퍼레이션 수 |
-|---|---------|------|-------------|
-| 1 | 특허·실용 공개·등록공보 | `docs/services/patent_utility.md` | 61 |
-| 2 | 특허·실용 인용문헌 | `docs/services/patent_citation.md` | 5 |
-| 3 | 특허·실용 행정처리 이력 | `docs/services/patent_admin_history.md` | 3 |
-| 4 | 특허·실용 분류코드 변동 이력 | `docs/services/patent_classification_history.md` | 3 |
-| 5 | 디자인 공보 | `docs/services/design.md` | 51 |
-| 6 | 디자인 행정처리 이력 | `docs/services/design_admin_history.md` | 2 |
-| 7 | 상표 행정처리 이력 | `docs/services/trademark_admin_history.md` | 2 |
-| 8 | 상표 출원 속보 | `docs/services/trademark.md` | 54 |
-| 9 | 법적 상태 이력 | `docs/services/legal_status.md` | 5 |
-| 10 | 특허·실용 통지서 마감기한 | `docs/services/patent_notice_deadline.md` | 6 |
-| 11 | 등록사항 | `docs/services/registration.md` | 12 |
-| 12 | 권리자 변동 이력 | `docs/services/right_holder_history.md` | 3 |
-| 13 | 분류코드 | `docs/services/classification_code.md` | 8 |
-| 14 | 심판사항 | `docs/services/trial.md` | 31 |
-| 15 | 대표 출원인 | `docs/services/representative_applicant.md` | 4 |
-| 16 | 시소러스 | `docs/services/thesaurus.md` | 2 |
-| 17 | 한국특허영문초록(KPA) | `docs/services/kpa_english_abstract.md` | 26 |
-| 18 | 기계번역용 국문초록 | `docs/services/machine_translation_abstract.md` | 1 |
-| 19 | 해외특허 | `docs/services/foreign_patent.md` | 81 |
-| 20 | 공통 | `docs/services/common.md` | 10 |
-| 21 | 특허 패밀리 | `docs/services/patent_family.md` | 5 |
-| 22 | 다인용 선행문헌 | `docs/services/multi_citation.md` | 2 |
-| 23 | 국유특허 | `docs/services/government_patent.md` | 2 |
-| 24 | 특허 기탁 미생물 | `docs/services/patent_microorganism.md` | 4 |
-| 25 | 인터넷 기술공지 | `docs/services/internet_tech_notice.md` | 2 |
-| 26 | 공모전 아이디어 | `docs/services/contest_idea.md` | 1 |
-| 27 | IP-Biz 하나로 서비스 기술분류 | `docs/services/ipbiz_hanaro.md` | 1 |
-| 28 | 디자인맵 형태분류 | `docs/services/design_map.md` | 2 |
-| 29 | 의견제출통지서 | `docs/services/opinion_notice.md` | 12 |
-| 30 | 거절결정서 | `docs/services/rejection_decision.md` | 12 |
-| 31 | 정정공보 | `docs/services/amendment_gazette.md` | 24 |
-| 32 | 출원인 법인 | `docs/services/applicant_corporation.md` | 5 |
-| 33 | 디자인 분류코드 변동 이력 | `docs/services/design_classification_history.md` | 3 |
-| 34 | 상표 분류코드 변동 이력 | `docs/services/trademark_classification_history.md` | 2 |
-| 35 | 해외디자인 | `docs/services/foreign_design.md` | 31 |
-| 36 | 해외상표 | `docs/services/foreign_trademark.md` | 22 |
-| 37 | 출원인 명칭 변동 이력 | `docs/services/applicant_name_history.md` | 3 |
-| 38 | 출원인 기술분야 | `docs/services/applicant_tech_field.md` | 2 |
-| 39 | 등록결정서 | `docs/services/registration_decision.md` | 9 |
-| 40 | 청구항 변동 이력 | `docs/services/claim_history.md` | 3 |
-| 41 | 특허 염기서열 | `docs/services/patent_sequence.md` | 7 |
-| 42 | 특허 합금조성비 | `docs/services/patent_alloy.md` | 2 |
-| 43 | TM5 공통상태 지표 | `docs/services/tm5_indicator.md` | 2 |
-| 44 | 특허·실용 피인용문헌 | `docs/services/patent_cited.md` | 3 |
-| 45 | 특허권 존속기간 연장등록 공보 | `docs/services/patent_extension.md` | 4 |
-| 46 | 의약품 국제일반명칭 | `docs/services/inn_medicine.md` | 3 |
-| 47 | 상표 원산지 명칭 | `docs/services/trademark_origin.md` | 3 |
-| 48 | 품종보호권 등록 식물 명칭 | `docs/services/variety_protection.md` | 3 |
-| 49 | 일본 특허 합금조성비 | `docs/services/japan_patent_alloy.md` | 5 |
-| 50 | 특허 중한 코퍼스 | `docs/services/patent_cn_kr_corpus.md` | 1 |
-| 51 | 특허·실용 권리자 변동 이력 | `docs/services/patent_right_transfer.md` | 5 |
-| 52 | 특허·실용 법적 상태 이력(ST.27) | `docs/services/patent_legal_status_st27.md` | 9 |
+| # | 서비스명 | 문서 | 오퍼레이션 | 경로 |
+|---|---------|------|-----------|------|
+| 1 | 특허·실용 공개·등록공보 | `docs/services/patent_utility.md` | 61 | ✅ |
+| 2 | 특허·실용 인용문헌 | `docs/services/patent_citation.md` | 5 | ✅ |
+| 3 | 특허·실용 행정처리 이력 | `docs/services/patent_admin_history.md` | 3 | ⚠️ |
+| 4 | 특허·실용 분류코드 변동 이력 | `docs/services/patent_classification_history.md` | 3 | ✅ |
+| 5 | 디자인 공보 | `docs/services/design.md` | 51 | ✅ |
+| 6 | 디자인 행정처리 이력 | `docs/services/design_admin_history.md` | 2 | ⚠️ |
+| 7 | 상표 행정처리 이력 | `docs/services/trademark_admin_history.md` | 2 | ⚠️ |
+| 8 | 상표 출원 속보 | `docs/services/trademark.md` | 54 | ✅ |
+| 9 | 법적 상태 이력 | `docs/services/legal_status.md` | 5 | ⚠️ |
+| 10 | 특허·실용 통지서 마감기한 | `docs/services/patent_notice_deadline.md` | 6 | ✅ |
+| 11 | 등록사항 | `docs/services/registration.md` | 12 | ✅ |
+| 12 | 권리자 변동 이력 | `docs/services/right_holder_history.md` | 3 | ⚠️ |
+| 13 | 분류코드 | `docs/services/classification_code.md` | 8 | ✅ |
+| 14 | 심판사항 | `docs/services/trial.md` | 31 | ✅ |
+| 15 | 대표 출원인 | `docs/services/representative_applicant.md` | 4 | ✅ |
+| 16 | 시소러스 | `docs/services/thesaurus.md` | 2 | ✅ |
+| 17 | 한국특허영문초록(KPA) | `docs/services/kpa_english_abstract.md` | 26 | ✅ |
+| 18 | 기계번역용 국문초록 | `docs/services/machine_translation_abstract.md` | 1 | ✅ |
+| 19 | 해외특허 | `docs/services/foreign_patent.md` | 81 | ✅ |
+| 20 | 특허 패밀리 | `docs/services/patent_family.md` | 5 | ✅ |
+| 21 | 다인용 선행문헌 | `docs/services/multi_citation.md` | 2 | ⚠️ |
+| 22 | 국유특허 | `docs/services/government_patent.md` | 2 | ⚠️ |
+| 23 | 특허 기탁 미생물 | `docs/services/patent_microorganism.md` | 4 | ⚠️ |
+| 24 | 인터넷 기술공지 | `docs/services/internet_tech_notice.md` | 2 | ⚠️ |
+| 25 | 공모전 아이디어 | `docs/services/contest_idea.md` | 1 | ⚠️ |
+| 26 | IP-Biz 하나로 서비스 기술분류 | `docs/services/ipbiz_hanaro.md` | 1 | ⚠️ |
+| 27 | 디자인맵 형태분류 | `docs/services/design_map.md` | 2 | ⚠️ |
+| 28 | 의견제출통지서 | `docs/services/opinion_notice.md` | 12 | ✅ |
+| 29 | 거절결정서 | `docs/services/rejection_decision.md` | 12 | ✅ |
+| 30 | 정정공보 | `docs/services/amendment_gazette.md` | 24 | ⚠️ |
+| 31 | 출원인 법인 | `docs/services/applicant_corporation.md` | 5 | ✅ |
+| 32 | 디자인 분류코드 변동 이력 | `docs/services/design_classification_history.md` | 3 | ⚠️ |
+| 33 | 상표 분류코드 변동 이력 | `docs/services/trademark_classification_history.md` | 2 | ✅ |
+| 34 | 해외디자인 | `docs/services/foreign_design.md` | 31 | ⚠️ |
+| 35 | 해외상표 | `docs/services/foreign_trademark.md` | 22 | ⚠️ |
+| 36 | 출원인 명칭 변동 이력 | `docs/services/applicant_name_history.md` | 3 | ⚠️ |
+| 37 | 출원인 기술분야 | `docs/services/applicant_tech_field.md` | 2 | ⚠️ |
+| 38 | 등록결정서 | `docs/services/registration_decision.md` | 9 | ⚠️ |
+| 39 | 청구항 변동 이력 | `docs/services/claim_history.md` | 3 | ⚠️ |
+| 40 | 특허 염기서열 | `docs/services/patent_sequence.md` | 7 | ⚠️ |
+| 41 | 특허 합금조성비 | `docs/services/patent_alloy.md` | 2 | ⚠️ |
+| 42 | TM5 공통상태 지표 | `docs/services/tm5_indicator.md` | 2 | ⚠️ |
+| 43 | 특허·실용 피인용문헌 | `docs/services/patent_cited.md` | 3 | ✅ |
+| 44 | 특허권 존속기간 연장등록 공보 | `docs/services/patent_extension.md` | 4 | ⚠️ |
+| 45 | 의약품 국제일반명칭 | `docs/services/inn_medicine.md` | 3 | ⚠️ |
+| 46 | 상표 원산지 명칭 | `docs/services/trademark_origin.md` | 3 | ⚠️ |
+| 47 | 품종보호권 등록 식물 명칭 | `docs/services/variety_protection.md` | 3 | ⚠️ |
+| 48 | 일본 특허 합금조성비 | `docs/services/japan_patent_alloy.md` | 5 | ⚠️ |
+| 49 | 특허 중한 코퍼스 | `docs/services/patent_cn_kr_corpus.md` | 1 | ⚠️ |
 
 ## 사용 예시
 
