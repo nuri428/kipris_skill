@@ -77,7 +77,7 @@ http://plus.kipris.or.kr/kipo-api/kipi/{ServicePath}/{operationId}?ServiceKey={K
 
 - **⚠️ 초당 호출 횟수: 반드시 50회 미만 유지** (초과 시 IP 차단)
 - **월간 무료 호출**: 1,000회/월 (무료 가입자 기준, 매월 1일 초기화)
-- **미신청 API**: 유료 플랜에서 신청하지 않은 API 호출 시 응답 헤더에 에러 메시지가 반환됨
+- **미신청 API**: 신청하지 않은 API 호출 시 `resultCode: 101` (`AccessKey&ServiceID Is Not Registerd Error`) 등의 에러 반환
 - 반복 검색이나 페이지네이션 시 요청 간 적절한 간격을 유지할 것
 
 ## 실행 워크플로우
